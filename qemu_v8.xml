@@ -7,6 +7,7 @@
 	<remote name="qemu" fetch="https://github.com/qemu" />
 	<remote name="peter" fetch="https://github.com/pm215" />
 	<remote name="jbech" fetch="https://github.com/jbech-linaro" />
+	<remote name="sfnet" fetch="http://git.code.sf.net/p/strace" />
 
 	<default remote="optee" revision="master" />
 
@@ -31,6 +32,9 @@
 
 	<!-- We're using Peter Maydell's git for ARM-TF until merged officially -->
 	<project remote="peter" path="arm-trusted-firmware" name="arm-trusted-firmware.git" revision="refs/heads/correct-cntfrq" />
+
+	<!-- strace -->
+	<project remote="sfnet" path="strace" name="code" />
 
 	<!-- Build, also temporary until everything sorted out -->
 	<project remote="jbech" path="build" name="build.git" revision="refs/heads/qemu_v8">
