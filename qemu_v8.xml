@@ -5,7 +5,6 @@
 	<remote name="linux" fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds" />
 	<remote name="optee" fetch="https://github.com/OP-TEE" />
 	<remote name="qemu" fetch="https://github.com/qemu" />
-	<remote name="jbech" fetch="https://github.com/jbech-linaro" />
 	<remote name="sfnet" fetch="http://git.code.sf.net/p/strace" />
 
 	<default remote="optee" revision="master" />
@@ -29,13 +28,13 @@
 	<project remote="qemu" path="qemu" name="qemu.git" />
 
 	<!-- We're using Linaro SWG for ARM-TF until merged officially -->
-	<project remote="linaro-swg" path="arm-trusted-firmware" name="arm-trusted-firmware.git" revision="refs/heads/qemu_optee_v8" />
+	<project remote="linaro-swg" path="arm-trusted-firmware" name="arm-trusted-firmware.git" revision="refs/heads/optee_paged_armtf_v1.2" />
 
 	<!-- strace -->
 	<project remote="sfnet" path="strace" name="code" />
 
 	<!-- Build, also temporary until everything sorted out -->
-	<project remote="jbech" path="build" name="build.git" revision="refs/heads/qemu_v8">
+	<project remote="optee" path="build" name="build.git">
 		<linkfile src="qemu_v8.mk" dest="build/Makefile" />
 		<linkfile src="../toolchains/aarch64/bin/aarch64-linux-gnu-gdb" dest="build/gdb" />
 	</project>
